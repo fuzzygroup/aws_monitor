@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+#  influxdb: 
+#  grafana:
+  website:
+#    depends_on:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/aws_monitor'
+    env_file:
+      - '.env'
+  #
+  # sidekiq:
+  #   build: .
+  #   command: sidekiq -C config/sidekiq.yml.erb
+  #   volumes:
+  #     - '.:/aws_monitor'
+  #   env_file:
+  #     - '.env'
+  #
+  # cable:
+  #   build: .
+  #   command: puma -p 28080 cable/config.ru
+  #   ports:
+  #     - '28080:28080'
+  #   volumes:
+  #     - '.:/aws_monitor'
+  #   env_file:
+  #     - '.env'
+

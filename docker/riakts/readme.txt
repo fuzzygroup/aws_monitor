@@ -1,0 +1,1 @@
+docker pull basho/riak-ts

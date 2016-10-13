@@ -1,0 +1,78 @@
+       # begin
+       # #debugger
+       #   session = Net::SSH.start( ansible_host.host_name, username, :keys => ansible_host.keyfile)#, :logger => Logger.new(File.join(Rails.root, "log", "aws_monitor.log")) )
+       #   puts "Success!  The box #{ansible_host.human_name} is still alive!!!".green
+       # rescue Net::SSH::ConnectionTimeout => e
+       #   puts "Hit #{e}"
+       #   AwsMonitor.play_white_wedding(ansible_host, '')
+       #   debugger
+       # rescue Net::SSH::Disconnect => e
+       #   puts "Hit #{e}"
+       #   AwsMonitor.play_white_wedding(ansible_host, '')
+       #   debugger
+       # rescue StandardError => e
+       #   puts "Hit #{e}"
+       #   AwsMonitor.play_white_wedding(ansible_host, '')
+       #   debugger
+       # end
+        
+        # debugger if ansible_host.human_name =~ /fiweb1/
+        # if session.error.nil?
+        #   puts "Success!  The box #{ansible_host.human_name} is still alive!!!".green
+        # else
+        #   puts "#{session.error}"
+        #   AwsMonitor.play_white_wedding(ansible_host, '')
+        #   debugger
+        # end
+        #session.close
+        
+        
+        
+                # #
+                # # Evaluate result -- which unless I read the code deeply I can't really do
+                # #
+                # begin
+                #
+                #   #debugger
+                # rescue StandardError => e
+                #   failure_ctr = failure_ctr + 1
+                #
+                #   debugger
+                #
+                #   # could be a connectivity glitch so WAIT then try again
+                #   result = Net::SSH.start( ansible_host.host_name, username, :keys => ansible_host.keyfile )
+                #
+                #   if failure_ctr >= min_failures && AwsMonitor.verify_connectivity?
+                #     AwsMonitor.play_white_wedding(ansible_host, e)
+                #     debugger
+                #   end
+                #end
+                #session.close
+                # debugger
+                # Net::SSH.start( ansible_host.host_name, username, :keys => ansible_host.keyfile ) do  |ssh|
+                #     #process
+                #     puts "Processing section: #{ansible_host.section}"
+                #     puts "Executing host: #{ansible_host.inspect}"
+                #     debugger
+                # end
+              #puts entry.inspect
+              #["ansibletest", 
+              #  "fiansible2   ansible_ssh_host", 
+              #  "ec2-52-42-222-29.us-west-2.compute.amazonaws.com           ansible_ssh_private_key_file=/Users/sjohnson/.ssh/fi_nav_sitecrawl.pem"]
+              #end
+
+            #end
+    
+            # ansible_hosts.each_section do |section|
+            #   debugger if section == 'web'
+            #   #next if section.is_a?(String)
+            #   # section.each do |k,v|
+            #   #   puts "k = #{k}"
+            #   #   puts "v = #{v}"
+            #   # end
+            #   #puts "I want #{myini[section]['somevar']} printed here!\n\n\n\n\n"
+            #   #debugger
+            # end
+            #end
+  
+        #end
